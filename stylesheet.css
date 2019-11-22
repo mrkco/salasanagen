@@ -1,16 +1,49 @@
 
-        body {
-            font-family: "Glacial Indifference", sans-serif;
-        }
-
-        .H1 {
-            font-size: 3rem;
-            text-align: center;
+/*before and after because of some browsers*/
+        *, *:before, *:after{
+            box-sizing:border-box ;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
-            width: 800px;
-            margin-left: calc((100% - 800px) / 2);
-            margin-right: calc((100% - 800px) / 2);
+            display: flex;
+            max-width: 100%;
+            position: fixed;/*always together with top and because
+            we want to fix the element in to the page section*/
+            top: 50%;
+            left: 0;
+            background-color: #b5d2dd;
+            transform: translate(0%,-50%);/*no need for left, but top needs
+            to find right position*/
+            justify-content: center;
+            
         }
+        .content {
+            display: flex;
+            width: 600px;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 0 30px 0;
+        }
+        .title {
+            font-family: "Glacial Indifference", sans-serif;
+            font-size: 2.3rem;
+            color: #427898;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .password{
+            background-color: white;
+            padding: 16px 8px;
+            font-family: "Glacial Indifference", sans-serif;
+            width: 70%;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 1.3rem;
+            border-radius: 35px;/*button edge rounding*/
+        }
+
+
+
 
