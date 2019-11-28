@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -10,8 +11,12 @@
 
     <!-- BOOTSTRAP -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
 
     <!-- FONT AWESOME -->
     <link href="css/all.css" rel="stylesheet">
@@ -19,17 +24,37 @@
     <!--STYLESHEET-->
     <link href="stylesheet.css" rel="stylesheet" type="text/css">
 
-    
+    <!--JS script-->
+    <script language="javascript" type="text/javascript">
+        function randomString() {
+            var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+            var string_length = 12;
+            var randomstring = '';
+            for (var i = 0; i < string_length; i++) {
+                var rnum = Math.floor(Math.random() * chars.length);
+                randomstring += chars.substring(rnum, rnum + 1);
+            }
+            document.randform.randomfield.value = randomstring;
+        }
+    </script>
+
     <title>Salasanageneraattori</title>
 </head>
-<body>
 
-<div class="container">
-    <div class="content">
-        <div class="title">Tulosta oma salasana</div>
-        <div class="password">hglhgljhgljhglhghjghjgj</div>
+<body>
+    <div class="title">Create your own password with one click</div>
+    <div class="container">
+        <div class="content">
+
+            <form name="randform" class="form">
+                <input class="button" type="button" value="Create password" onClick="randomString();">&nbsp;
+                <input class="text-field" type="text" name="randomfield" value="">
+            </form>
+
+        </div>
     </div>
-</div>
+
 
 </body>
+
 </html>

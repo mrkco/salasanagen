@@ -24,24 +24,39 @@
             width: 600px;
             flex-direction: column;
             align-items: center;
-            padding: 30px 0 30px 0;
+            padding: 60px 0 60px 0;
         }
         .title {
             font-family: "Glacial Indifference", sans-serif;
-            font-size: 2.3rem;
+            font-size: 2rem;
             color: #427898;
             text-align: center;
-            margin-bottom: 30px;
+            margin-top: 100px;
         }
-        .password{
+        .form{
+            display: flex;
+            justify-content: center;
+        }
+        .button{
             background-color: white;
-            padding: 16px 8px;
+            padding: 8px 10px;
             font-family: "Glacial Indifference", sans-serif;
             width: 70%;
-            border: 1px solid black;
-            text-align: center;
+            border: 3px solid #427898;
             font-size: 1.3rem;
             border-radius: 35px;/*button edge rounding*/
+        }
+        .text-field{
+            background-color: white;
+            font-family: "Glacial Indifference", sans-serif;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        .button:hover{
+            background-color:#8cbfde;
+        }
+        .button:active{
+            background-color: #b9dbf0;
         }
 
 
