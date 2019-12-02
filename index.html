@@ -24,37 +24,21 @@
     <!--STYLESHEET-->
     <link href="stylesheet.css" rel="stylesheet" type="text/css">
 
-    <!--JS script-->
-    <script language="javascript" type="text/javascript">
-        function randomString() {
-            var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
-            var string_length = 12;
-            var randomstring = '';
-            for (var i = 0; i < string_length; i++) {
-                var rnum = Math.floor(Math.random() * chars.length);
-                randomstring += chars.substring(rnum, rnum + 1);
-            }
-            document.randform.randomfield.value = randomstring;
-        }
-    </script>
-
+    <!--CLIPBOARD.JS-->
+    <script src="clipboard.min.js"></script>
+    
     <title>Salasanageneraattori</title>
 </head>
 
 <body>
-    <div class="title">Create your own password with one click</div>
     <div class="container">
         <div class="content">
-
-            <form name="randform" class="form">
-                <input class="button" type="button" value="Create password" onClick="randomString();">&nbsp;
-                <input class="text-field" type="text" name="randomfield" value="">
-            </form>
-
+            <div class="title">Create your own password with one click</div>
+            <div class="password" data-clipboard-action="copy" data-clipboard-target=".password">Your new password</div>
         </div>
     </div>
 
 
 </body>
-
+<script type="text/javascript" src="password.js"></script>
 </html>
